@@ -1,0 +1,129 @@
+"source ~/.vim/vimrc
+let mapleader = " "
+"sethandler <C-N> a:vim
+"sethandler <C-J> a:vim
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set number
+set showmode
+set showcmd
+
+set ideamarks
+set ideajoin
+set NERDTree
+"set multicursor
+set easymotion
+"set sneak
+set highlightedyank
+set textobj-entire
+
+" which-key
+let g:WhichKeyDesc_Actions = "<leader>a Actions"
+let g:WhichKeyDesc_ActionsRunCurrent = "<leader>aR Run this code"
+let g:WhichKeyDesc_ActionsRun = "<leader>ar Run"
+let g:WhichKeyDesc_ActionsDebugCurrent = "<leader>aD Debug this code"
+let g:WhichKeyDesc_ActionsDebug = "<leader>ad Debug"
+let g:WhichKeyDesc_ActionsShowIntentions = "<leader>am Show intentions"
+let g:WhichKeyDesc_Vcs = "<leader>v VSC"
+let g:WhichKeyDesc_VcsFetch = "<leader>vf Fetch"
+let g:WhichKeyDesc_Refactoring = "<leader>r Refactoring"
+let g:WhichKeyDesc_RefactoringRenameElement = "<leader>rn Rename"
+let g:WhichKeyDesc_RefactoringExtractMethod = "<leader>rm Extract method"
+let g:WhichKeyDesc_RefactoringIntroduceVar = "<leader>rv Introduce variable"
+let g:WhichKeyDesc_RefactoringIntroduceField = "<leader>rf Introduce field"
+let g:WhichKeyDesc_RefactoringChangeSignature = "<leader>rs Change signature"
+let g:WhichKeyDesc_RefactoringQuickList = "<leader>rr Quick list"
+let g:WhichKeyDesc_Goto = "<leader>g Goto"
+let g:WhichKeyDesc_GotoClass = "<leader>gc Goto Class"
+let g:WhichKeyDesc_GotoFile = "<leader>gC Goto File"
+let g:WhichKeyDesc_GotoRecentFiles = "<leader>gr Recent Files"
+let g:WhichKeyDesc_GotoRecentChangedFiles = "<leader>gR Recent changed files"
+let g:WhichKeyDesc_GotoRecentLocations = "<leader>gl Recent locations"
+let g:WhichKeyDesc_GotoDeclaration = "<leader>gd Goto Declaration"
+let g:WhichKeyDesc_GotoTypeDeclaration = "<leader>gy Goto Type declaration"
+let g:WhichKeyDesc_GotoImplementation = "<leader>gi Goto Implementation"
+let g:WhichKeyDesc_GotoShowUsages = "<leader>gu Show Usages"
+let g:WhichKeyDesc_GotoTest = "<leader>gt Goto Test"
+let g:WhichKeyDesc_GotoForward = "<leader>gf Forward"
+let g:WhichKeyDesc_GotoBack = "<leader>gb Back"
+let g:WhichKeyDesc_GotoAction = "<leader>ga Goto Action"
+let g:WhichKeyDesc_JumpEasyMotion = "<leader>j Jump with easymotion"
+set which-key
+
+" Use system clipboard
+" set clipboard+=unnamed
+
+
+"set notimeout
+"inoremap jk <Esc>
+inoremap <S-Space> <C-O>a
+" hard mode
+inoremap <BS> <NOP>
+noremap <BS> <NOP>
+cnoremap <BS> <NOP>
+noremap <UP> <NOP>
+noremap <DOWN> <NOP>
+noremap <LEFT> <NOP>
+noremap <RIGHT> <NOP>
+nnoremap j <NOP>
+nnoremap k <NOP>
+nnoremap l <NOP>
+nnoremap h <NOP>
+nnoremap <C-N> <NOP>
+nnoremap <C-P> <NOP>
+
+imap <A-J> <Action>(EditorDown)
+imap <A-K> <Action>(EditorUp)
+
+" no highlight
+nnoremap <leader>ch :nohls<CR>
+
+map <leader>gc <Action>(GotoClass)
+map <leader>gC <Action>(GotoFile)
+map <leader>gr <Action>(RecentFiles)
+map <leader>gR <Action>(RecentChangedFiles)
+map <leader>gl <Action>(RecentLocations)
+map <leader>gd <Action>(GotoDeclaration) " alias for <C-]> and gd
+map <leader>gy <Action>(GotoTypeDeclaration)
+map <leader>gi <Action>(GotoImplementation)
+map <leader>gu <Action>(ShowUsages)
+map <leader>gt <Action>(GotoTest)
+map <leader>gf <Action>(Forward)
+map <leader>gb <Action>(Back)
+map <leader>ga <Action>(GotoAction)
+" Refactoring
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+" vcs
+map <leader>vf <Action>(Git.Fetch)
+" actions
+map <leader>am <action>(ShowIntentionActions)
+map <leader>aR <Action>(RunClass)
+map <leader>ar <Action>(Run)
+map <leader>aD <Action>(DebugClass)
+map <leader>ad <Action>(Debug)
+
+map <leader>fp <Action>(FindInPath)
+map <leader>fu <Action>(FindUsages)
+
+map <leader>x :NERDTreeToggle<CR>
+map <leader>q <Action>(CloseContent)
+map <leader>j <Plug>(easymotion-s)
+map <leader><leader>w <Plug>(easymotion-bd-w)
+map <leader><leader>W <Plug>(easymotion-bd-W)
+map <leader><leader>e <Plug>(easymotion-bd-e)
+map <leader><leader>E <Plug>(easymotion-bd-E)
+
+map <leader>dd <Action>(RestoreDefaultLayout)
+
+" comments
+map gc <Action>(CommentByLineComment)
+map gC <Action>(CommentByBlockComment)
