@@ -1,3 +1,7 @@
+" plugins to consider
+" - https://github.com/machakann/vim-highlightedyank.git
+" - https://github.com/easymotion/vim-easymotion.git (opt)
+
 set nocompatible
 
 filetype plugin indent on
@@ -33,7 +37,7 @@ map <leader><leader>W <Plug>(easymotion-bd-W)
 "set multicursor
 
 " Use system clipboard
-set clipboard+=unnamed
+" set clipboard+=unnamed
 
 inoremap <S-Space> <C-O>a
 " hard mode
