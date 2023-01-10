@@ -52,6 +52,7 @@ let g:WhichKeyDesc_GotoForward = "<leader>gf Forward"
 let g:WhichKeyDesc_GotoBack = "<leader>gb Back"
 let g:WhichKeyDesc_GotoAction = "<leader>ga Goto Action"
 let g:WhichKeyDesc_JumpEasyMotion = "<leader>j Jump with easymotion"
+let g:WhichKeyDesc_CodeImplementMethods = "<leader>ci Implement methods"
 set which-key
 
 " Use system clipboard
@@ -81,6 +82,9 @@ imap <A-K> <Action>(EditorUp)
 
 " no highlight
 nnoremap <leader>ch :nohls<CR>
+
+" code
+map <leader>ci <Action>(ImplementMethods)
 
 map <leader>gc <Action>(GotoClass)
 map <leader>gC <Action>(GotoFile)
