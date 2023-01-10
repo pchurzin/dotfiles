@@ -53,6 +53,7 @@ let g:WhichKeyDesc_GotoBack = "<leader>gb Back"
 let g:WhichKeyDesc_GotoAction = "<leader>ga Goto Action"
 let g:WhichKeyDesc_JumpEasyMotion = "<leader>j Jump with easymotion"
 let g:WhichKeyDesc_CodeImplementMethods = "<leader>ci Implement methods"
+let g:WhichKeyDesc_ToolsStartSsh = "<leader>ts Start SSH"
 set which-key
 
 " Use system clipboard
@@ -117,6 +118,9 @@ map <leader>ad <Action>(Debug)
 
 map <leader>fp <Action>(FindInPath)
 map <leader>fu <Action>(FindUsages)
+
+" Tools
+map <leader>ts <Action>(com.jetbrains.plugins.remotesdk.console.RunSshConsoleAction)
 
 map <leader>x :NERDTreeToggle<CR>
 map <leader>q <Action>(CloseContent)
