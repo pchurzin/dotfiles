@@ -1,4 +1,6 @@
 "source ~/.vim/vimrc
+set visualbell
+
 let mapleader = " "
 "sethandler <C-N> a:vim
 "sethandler <C-J> a:vim

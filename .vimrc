@@ -7,6 +7,8 @@ set nocompatible
 filetype plugin indent on
 syntax on
 
+set visualbell
+
 let mapleader = " "
 
 set title
