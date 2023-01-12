@@ -57,7 +57,6 @@ let g:WhichKeyDesc_GotoAction = "<leader>ga Goto Action"
 let g:WhichKeyDesc_JumpEasyMotion = "<leader>j Jump with easymotion"
 let g:WhichKeyDesc_Code = "<leader>c Code"
 let g:WhichKeyDesc_CodeImplementMethods = "<leader>ci Implement methods"
-let g:WhichKeyDesc_CodeReformat = "<leader>cr Reformat code"
 let g:WhichKeyDesc_ToolsStartSsh = "<leader>ts Start SSH"
 set which-key
 
