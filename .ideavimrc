@@ -39,6 +39,7 @@ let g:WhichKeyDesc_RefactoringIntroduceVar = "<leader>rv Introduce variable"
 let g:WhichKeyDesc_RefactoringIntroduceField = "<leader>rf Introduce field"
 let g:WhichKeyDesc_RefactoringChangeSignature = "<leader>rs Change signature"
 let g:WhichKeyDesc_RefactoringQuickList = "<leader>rr Quick list"
+let g:WhichKeyDesc_RefactoringQuickList = "<leader>rd Safe delete"
 let g:WhichKeyDesc_Goto = "<leader>g Goto"
 let g:WhichKeyDesc_GotoClass = "<leader>gc Goto Class"
 let g:WhichKeyDesc_GotoFile = "<leader>gC Goto File"
@@ -54,7 +55,9 @@ let g:WhichKeyDesc_GotoForward = "<leader>gf Forward"
 let g:WhichKeyDesc_GotoBack = "<leader>gb Back"
 let g:WhichKeyDesc_GotoAction = "<leader>ga Goto Action"
 let g:WhichKeyDesc_JumpEasyMotion = "<leader>j Jump with easymotion"
+let g:WhichKeyDesc_Code = "<leader>c Code"
 let g:WhichKeyDesc_CodeImplementMethods = "<leader>ci Implement methods"
+let g:WhichKeyDesc_CodeReformat = "<leader>cr Reformat code"
 let g:WhichKeyDesc_ToolsStartSsh = "<leader>ts Start SSH"
 set which-key
 
@@ -88,6 +91,7 @@ nnoremap <leader>ch :nohls<CR>
 
 " code
 map <leader>ci <Action>(ImplementMethods)
+map <leader>cr mqgqae`m
 
 map <leader>gc <Action>(GotoClass)
 map <leader>gC <Action>(GotoFile)
@@ -109,6 +113,7 @@ map <leader>rv <Action>(IntroduceVariable)
 map <leader>rf <Action>(IntroduceField)
 map <leader>rs <Action>(ChangeSignature)
 map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+map <leader>rd <Action>(SafeDelete)
 " vcs
 map <leader>vf <Action>(Git.Fetch)
 " actions
