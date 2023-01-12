@@ -91,7 +91,7 @@ nnoremap <leader>ch :nohls<CR>
 
 " code
 map <leader>ci <Action>(ImplementMethods)
-map <leader>cr mqgqae`m
+nmap gwae <Action>(ReformatCode)
 
 map <leader>gc <Action>(GotoClass)
 map <leader>gC <Action>(GotoFile)
