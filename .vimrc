@@ -35,6 +35,7 @@ highlight link EasyMotionIncSearch Search
 map <leader>j <Plug>(easymotion-sn)
 map <leader><leader>w <Plug>(easymotion-bd-w)
 map <leader><leader>W <Plug>(easymotion-bd-W)
+map <leader>; <Plug>(easymotion-repeat)
 
 "set multicursor
 
