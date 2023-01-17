@@ -68,6 +68,11 @@ nnoremap <C-P> <NOP>
 nnoremap <leader>ch :nohls<CR>
 nnoremap <silent> <C-L> :<C-U>nohlsearch<CR><C-L>
 
+" add line after current
+nnoremap <leader>o mqo<ESC>`q
+" add line before current
+nnoremap <leader>O mqO<ESC>`q
+
 
 if &term =~ 'xterm'
 	let &t_SI = "\e[5 q" " blink bar

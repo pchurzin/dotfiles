@@ -86,6 +86,11 @@ nnoremap h <NOP>
 nnoremap <C-N> <NOP>
 nnoremap <C-P> <NOP>
 
+" insert line after current
+nnoremap mqo<ESC>`q
+" insert line before current
+nnoremap mqO<ESC>`q
+
 imap <A-J> <Action>(EditorDown)
 imap <A-K> <Action>(EditorUp)
 
