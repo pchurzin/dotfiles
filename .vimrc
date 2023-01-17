@@ -66,6 +66,7 @@ nnoremap <C-P> <NOP>
 
 " no highlight
 nnoremap <leader>ch :nohls<CR>
+nnoremap <silent> <C-L> :<C-U>nohlsearch<CR><C-L>
 
 
 if &term =~ 'xterm'
