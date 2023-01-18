@@ -86,16 +86,17 @@ nnoremap h <NOP>
 nnoremap <C-N> <NOP>
 nnoremap <C-P> <NOP>
 
-" insert line after current
-nnoremap mqo<ESC>`q
-" insert line before current
-nnoremap mqO<ESC>`q
+" add line after current
+nnoremap <leader>o mqo<ESC>`q
+" add line before current
+nnoremap <leader>O mqO<ESC>`q
 
 imap <A-J> <Action>(EditorDown)
 imap <A-K> <Action>(EditorUp)
 
 " no highlight
 nnoremap <leader>ch :nohls<CR>
+nnoremap <C-L> :nohls<CR>
 
 " code
 map <leader>ci <Action>(ImplementMethods)
