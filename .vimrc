@@ -6,6 +6,8 @@ set nocompatible
 
 set encoding=utf-8
 
+colorscheme murphy
+
 filetype plugin indent on
 syntax on
 
