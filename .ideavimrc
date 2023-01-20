@@ -32,6 +32,7 @@ let g:WhichKeyDesc_ActionsDebug = "<leader>ad Debug"
 let g:WhichKeyDesc_ActionsShowIntentions = "<leader>am Show intentions"
 let g:WhichKeyDesc_Vcs = "<leader>v VSC"
 let g:WhichKeyDesc_VcsFetch = "<leader>vf Fetch"
+let g:WhichKeyDesc_VcsFetch = "<leader>vb Branches"
 let g:WhichKeyDesc_Refactoring = "<leader>r Refactoring"
 let g:WhichKeyDesc_RefactoringRenameElement = "<leader>rn Rename"
 let g:WhichKeyDesc_RefactoringExtractMethod = "<leader>rm Extract method"
@@ -125,6 +126,7 @@ map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 map <leader>rd <Action>(SafeDelete)
 " vcs
 map <leader>vf <Action>(Git.Fetch)
+map <leader>vb <Action>(Git.Branches)
 " actions
 map <leader>am <action>(ShowIntentionActions)
 map <leader>aR <Action>(RunClass)
