@@ -137,6 +137,7 @@ map <leader>aD <Action>(DebugClass)
 map <leader>ad <Action>(Debug)
 
 map <leader>fp <Action>(FindInPath)
+map <leader>fP <Action>(ReplaceInPath)
 map <leader>fu <Action>(FindUsages)
 
 " Tools
