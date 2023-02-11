@@ -8,6 +8,13 @@ set encoding=utf-8
 
 colorscheme murphy
 
+set nowrap
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
+set smartindent
+
 filetype plugin indent on
 syntax on
 
