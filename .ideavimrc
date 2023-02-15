@@ -38,6 +38,7 @@ let g:WhichKeyDesc_RefactoringRenameElement = "<leader>rn Rename"
 let g:WhichKeyDesc_RefactoringExtractMethod = "<leader>rm Extract method"
 let g:WhichKeyDesc_RefactoringIntroduceVar = "<leader>rv Introduce variable"
 let g:WhichKeyDesc_RefactoringIntroduceField = "<leader>rf Introduce field"
+let g:WhichKeyDesc_RefactoringIntroduceParameter = "<leader>rp Introduce parameter"
 let g:WhichKeyDesc_RefactoringChangeSignature = "<leader>rs Change signature"
 let g:WhichKeyDesc_RefactoringQuickList = "<leader>rr Quick list"
 let g:WhichKeyDesc_RefactoringQuickList = "<leader>rd Safe delete"
@@ -123,6 +124,7 @@ map <leader>rn <Action>(RenameElement)
 map <leader>rm <Action>(ExtractFunction)
 map <leader>rv <Action>(IntroduceVariable)
 map <leader>rf <Action>(IntroduceField)
+map <leader>rp <Action>(IntroduceParameter)
 map <leader>rs <Action>(ChangeSignature)
 map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 map <leader>rd <Action>(SafeDelete)
