@@ -158,3 +158,8 @@ map <leader>dd <Action>(RestoreDefaultLayout)
 " comments
 map gc <Action>(CommentByLineComment)
 map gC <Action>(CommentByBlockComment)
+
+map <leader>y "+y
+map <leader>p "+p
+map <leader>P "+P
+
