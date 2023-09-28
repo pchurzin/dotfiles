@@ -37,6 +37,8 @@ set shiftwidth=4
 set smarttab
 set expandtab
 set smartindent
+set list
+set listchars=tab:▸·◂,space:·
 
 filetype plugin indent on
 syntax on
