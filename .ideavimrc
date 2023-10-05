@@ -11,6 +11,7 @@ set ignorecase
 set smartcase
 
 set number
+set relativenumber
 set showmode
 set showcmd
 
@@ -45,8 +46,8 @@ let g:WhichKeyDesc_RefactoringQuickList = "<leader>rd Safe delete"
 let g:WhichKeyDesc_Goto = "<leader>g Goto"
 let g:WhichKeyDesc_GotoClass = "<leader>gc Goto Class"
 let g:WhichKeyDesc_GotoFile = "<leader>gC Goto File"
-let g:WhichKeyDesc_GotoRecentFiles = "<leader>gr Recent Files"
-let g:WhichKeyDesc_GotoRecentChangedFiles = "<leader>gR Recent changed files"
+let g:WhichKeyDesc_GotoRecentFiles = "<leader>gR Recent Files"
+let g:WhichKeyDesc_GotoRecentChangedFiles = "<leader>gr Recent changed files"
 let g:WhichKeyDesc_GotoRecentLocations = "<leader>gl Recent locations"
 let g:WhichKeyDesc_GotoDeclaration = "<leader>gd Goto Declaration"
 let g:WhichKeyDesc_GotoTypeDeclaration = "<leader>gy Goto Type declaration"
@@ -108,8 +109,8 @@ nmap gwae <Action>(ReformatCode)
 
 map <leader>gc <Action>(GotoClass)
 map <leader>gC <Action>(GotoFile)
-map <leader>gr <Action>(RecentFiles)
-map <leader>gR <Action>(RecentChangedFiles)
+map <leader>gR <Action>(RecentFiles)
+map <leader>gr <Action>(RecentChangedFiles)
 map <leader>gl <Action>(RecentLocations)
 map <leader>gd gd
 map <leader>gy <Action>(GotoTypeDeclaration)
