@@ -38,8 +38,13 @@ set smarttab
 set expandtab
 set smartindent
 set list
-set listchars=tab:▸·◂,space:·
+set listchars=tab:▸·,space:·
+if has("patch-8.1.0759")
+    set listchars=tab:▸·◂,space:·
+end
 
+
+set history=200
 filetype plugin indent on
 syntax on
 
@@ -55,6 +60,7 @@ set ignorecase
 set smartcase
 
 set number
+set relativenumber
 set showmode
 set showcmd
 set cursorline
