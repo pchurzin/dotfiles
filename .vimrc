@@ -28,6 +28,10 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=-1
 
+augroup my_colorshemes
+    autocmd!
+    autocmd ColorScheme solarized highlight! link SpecialKey NonText
+augroup END
 colorscheme solarized
 set background=light
 
