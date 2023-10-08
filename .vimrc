@@ -15,12 +15,15 @@ function! PackInit() abort
     call minpac#add('tpope/vim-commentary')
     call minpac#add('udalov/kotlin-vim')
     call minpac#add('altercation/vim-colors-solarized')
+    call minpac#add('tpope/vim-surround')
     " vim language server protocol support
     call minpac#add('prabirshrestha/vim-lsp')
 endfunction
 command! PackUpdate call PackInit() | call minpac#update()
 command! PackClean  call PackInit() | call minpac#clean()
 command! PackStatus packadd minpac | call minpac#status()
+
+packadd! matchit
 
 set encoding=utf-8
 
