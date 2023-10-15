@@ -73,6 +73,8 @@ set showcmd
 set cursorline
 set cursorcolumn
 
+set hidden
+
 " vim-easymotion
 let g:EasyMotion_use_upper = 1
 let g:EasyMotion_keys = 'ASDGHKLQWERTYUIOPZXCVBNMFJ'
