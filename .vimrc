@@ -16,6 +16,7 @@ function! PackInit() abort
     call minpac#add('udalov/kotlin-vim')
     call minpac#add('altercation/vim-colors-solarized')
     call minpac#add('tpope/vim-surround')
+    call minpac#add('tpope/vim-dispatch')
     " vim language server protocol support
     call minpac#add('prabirshrestha/vim-lsp')
 endfunction
