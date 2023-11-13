@@ -105,6 +105,14 @@ if executable('ccls')
       \ 'allowlist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
       \ })
 endif
+" kotlin-language-server
+if executable('kotlin-language-server')
+    au User lsp_setup call lsp#register_server({
+      \ 'name': 'kotlin-language-server',
+      \ 'cmd' : {server_info->['kotlin-language-server']},
+      \ 'allowlist': ['kotlin', 'kt', 'kts'],
+      \ })
+endif
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
