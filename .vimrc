@@ -17,6 +17,9 @@ function! PackInit() abort
     call minpac#add('altercation/vim-colors-solarized')
     call minpac#add('tpope/vim-surround')
     call minpac#add('tpope/vim-dispatch')
+    call minpac#add('tpope/vim-obsession')
+    call minpac#add('tpope/vim-fugitive')
+    call minpac#add('tfnico/vim-gradle')
     " vim language server protocol support
     call minpac#add('prabirshrestha/vim-lsp')
 endfunction
@@ -165,6 +168,7 @@ nnoremap <leader>o mqo<ESC>`q
 " add line before current
 nnoremap <leader>O mqO<ESC>`q
 
+nmap <leader>D :Dispatch 
 
 if &term =~ 'xterm'
 	let &t_SI = "\e[5 q" " blink bar
