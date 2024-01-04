@@ -145,7 +145,10 @@ augroup END
 "set multicursor
 
 " Use system clipboard
-" set clipboard+=unnamed
+set clipboard^=unnamed
+if has('unnamedplus')
+    set clipboard^=unnamedplus
+endif
 
 inoremap <S-Space> <C-O>a
 " hard mode
