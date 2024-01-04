@@ -20,6 +20,7 @@ function! PackInit() abort
     call minpac#add('tpope/vim-obsession')
     call minpac#add('tpope/vim-fugitive')
     call minpac#add('tfnico/vim-gradle')
+    call minpac#add('pchurzin/vim-compiler-kotlin')
     " vim language server protocol support
     call minpac#add('prabirshrestha/vim-lsp')
 endfunction
