@@ -65,7 +65,7 @@ let g:WhichKeyDesc_ToolsStartSsh = "<leader>ts Start SSH"
 set which-key
 
 " Use system clipboard
-" set clipboard+=unnamed
+set clipboard^=unnamed
 
 
 "set notimeout
