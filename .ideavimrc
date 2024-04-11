@@ -83,8 +83,8 @@ noremap <LEFT> <NOP>
 inoremap <LEFT> <NOP>
 noremap <RIGHT> <NOP>
 inoremap <RIGHT> <NOP>
-nnoremap j <NOP>
-nnoremap k <NOP>
+" nnoremap j <NOP>
+" nnoremap k <NOP>
 nnoremap l <NOP>
 nnoremap h <NOP>
 nnoremap <C-N> <NOP>
