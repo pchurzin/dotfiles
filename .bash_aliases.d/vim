@@ -1,0 +1,10 @@
+function vimsession () {
+    if [ -f Session.vim ]; then 
+        vim -S $*
+    else
+        vim $*
+    fi
+}
+
+alias vim='vimsession $*'
+

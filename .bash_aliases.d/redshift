@@ -1,0 +1,2 @@
+alias rs4='redshift -P -O 4000'
+
