@@ -77,6 +77,7 @@ set showmode
 set showcmd
 set cursorline
 set cursorcolumn
+set colorcolumn=80,120
 
 set hidden
 
