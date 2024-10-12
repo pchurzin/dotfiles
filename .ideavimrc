@@ -163,6 +163,10 @@ nnoremap <leader>O mqO<ESC>`q
 
 imap <A-J> <Action>(EditorDown)
 imap <A-K> <Action>(EditorUp)
+imap <C-X><C-O> <Action>(SmartTypeCompletion)
+imap <C-X><C-U> <Action>(CodeCompletion)
+imap <C-N> <Action>(HippieBackwardCompletion)
+imap <C-P> <Action>(HippieCompletion)
 
 " no highlight
 nnoremap <leader>ch :nohls<CR>
