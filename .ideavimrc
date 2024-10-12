@@ -153,8 +153,8 @@ inoremap <RIGHT> <NOP>
 " nnoremap k <NOP>
 nnoremap l <NOP>
 nnoremap h <NOP>
-nnoremap <C-N> <NOP>
-nnoremap <C-P> <NOP>
+"nnoremap <C-N> <NOP>
+"nnoremap <C-P> <NOP>
 
 " add line after current
 nnoremap <leader>o mqo<ESC>`q
