@@ -152,6 +152,7 @@ if has('unnamedplus')
     set clipboard^=unnamedplus
 endif
 
+inoremap <C-d> <Del>
 inoremap <S-Space> <C-O>a
 " hard mode
 inoremap <BS> <NOP>

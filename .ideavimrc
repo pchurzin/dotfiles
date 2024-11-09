@@ -136,6 +136,7 @@ map Ю <gt>
 
 "set notimeout
 "inoremap jk <Esc>
+inoremap <C-d> <Del>
 inoremap <S-Space> <C-O>a
 " hard mode
 inoremap <BS> <NOP>
