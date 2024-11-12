@@ -1,5 +1,6 @@
 set nocompatible
 
+" == plugins
 " minpac
 " git clone https://github.com/k-takata/minpac.git ~/.vim/pack/minpac/opt/minpac
 function! PackInit() abort
@@ -30,19 +31,15 @@ command! PackStatus packadd minpac | call minpac#status()
 
 packadd! matchit
 
-set encoding=utf-8
+" == end plugins
 
+filetype plugin indent on
+syntax on
+
+set encoding=utf-8
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=-1
-
-augroup my_colorshemes
-    autocmd!
-    autocmd ColorScheme solarized highlight! link SpecialKey NonText
-augroup END
-colorscheme solarized
-set background=light
-
 set nowrap
 set tabstop=4
 set shiftwidth=4
@@ -54,23 +51,13 @@ set listchars=tab:▸·,space:·
 if has("patch-8.1.0759")
     set listchars=tab:▸·◂,space:·
 end
-
-
 set history=200
-filetype plugin indent on
-syntax on
-
 set visualbell
-
-let mapleader = " "
-
 set title
-
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
 set number
 set relativenumber
 set showmode
@@ -78,9 +65,25 @@ set showcmd
 set cursorline
 set cursorcolumn
 set colorcolumn=80,120
-
 set hidden
 
+augroup my_colorshemes
+    autocmd!
+    autocmd ColorScheme solarized highlight! link SpecialKey NonText
+augroup END
+colorscheme solarized
+set background=light
+"
+"set multicursor
+
+" Use system clipboard
+set clipboard^=unnamed
+if has('unnamedplus')
+    set clipboard^=unnamedplus
+endif
+
+" Mappings
+let mapleader = " "
 " vim-easymotion
 let g:EasyMotion_use_upper = 1
 let g:EasyMotion_keys = 'ASDGHKLQWERTYUIOPZXCVBNMFJ'
@@ -108,13 +111,13 @@ if executable('ccls')
       \ })
 endif
 " kotlin-language-server
-if executable('kotlin-language-server')
-    au User lsp_setup call lsp#register_server({
-      \ 'name': 'kotlin-language-server',
-      \ 'cmd' : {server_info->['kotlin-language-server']},
-      \ 'allowlist': ['kotlin', 'kt', 'kts'],
-      \ })
-endif
+"if executable('kotlin-language-server')
+"    au User lsp_setup call lsp#register_server({
+"      \ 'name': 'kotlin-language-server',
+"      \ 'cmd' : {server_info->['kotlin-language-server']},
+"      \ 'allowlist': ['kotlin', 'kt', 'kts'],
+"      \ })
+"endif
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
@@ -143,14 +146,6 @@ augroup lsp_install
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
-
-"set multicursor
-
-" Use system clipboard
-set clipboard^=unnamed
-if has('unnamedplus')
-    set clipboard^=unnamedplus
-endif
 
 inoremap <C-d> <Del>
 inoremap <S-Space> <C-O>a
