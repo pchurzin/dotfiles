@@ -181,6 +181,23 @@ nnoremap <leader>O mqO<ESC>`q
 
 nmap <leader>D :Dispatch 
 
+" fzf mappings
+nnoremap <leader>fb :Buffers<CR>
+nnoremap <leader>fo :Files<CR>
+nnoremap <leader>fO :Files ~<CR>
+nnoremap <leader>fl :Lines<CR>
+nnoremap <leader>fbl :BLines<CR>
+nnoremap <leader>ft :Tags<CR>
+nnoremap <leader>fbt :BTags<CR>
+nnoremap <leader>fm :Marks<CR>
+nnoremap <leader>fj :Jumps<CR>
+nnoremap <leader>fc :Commands<CR>
+nnoremap <leader>f? :Helptags<CR>
+nnoremap <leader>f: :History:<CR>
+nnoremap <leader>f/ :History/<CR>
+nnoremap <leader>fh :History<CR>
+nnoremap <leader>fgf :GFiles<CR>
+
 if &term =~ 'xterm'
 	let &t_SI = "\e[5 q" " blink bar
 	let &t_SR = "\e[3 q" " blink underline
