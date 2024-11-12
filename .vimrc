@@ -24,6 +24,8 @@ function! PackInit() abort
     call minpac#add('pchurzin/vim-compiler-kotlin')
     " vim language server protocol support
     call minpac#add('prabirshrestha/vim-lsp')
+    call minpac#add('junegunn/fzf', {'do': { -> fzf#install() }})
+    call minpac#add('junegunn/fzf.vim')
 endfunction
 command! PackUpdate call PackInit() | call minpac#update()
 command! PackClean  call PackInit() | call minpac#clean()
