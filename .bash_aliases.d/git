@@ -5,7 +5,7 @@ alias gca='git commit --amend --no-edit'
 alias gd='git diff'
 alias gds='git diff --staged'
 alias gfo='git fetch origin --prune'
-alias gh="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --all --date=short"
+alias gh="git log --pretty=format:'%C(auto)%h %ad | %s [%an]%d%Creset' --graph --all --date=short"
 alias ghd='git log --oneline develop..'
 alias gk='git checkout'
 alias go='git switch'
