@@ -1,0 +1,12 @@
+[user]
+	name = Pavel Churzin
+	email = pavel@pchurzin.ru
+[core]
+	autocrlf = input
+	editor = vim
+[rebase]
+	autoSquash = true
+[init]
+	templatedir = ~/.git_template
+[alias]
+	ctags = !.git/hooks/ctags
