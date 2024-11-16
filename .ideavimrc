@@ -23,6 +23,7 @@ set easymotion
 "set sneak
 set highlightedyank
 set textobj-entire
+set surround
 
 " which-key
 let g:WhichKeyDesc_Actions = "<leader>a Actions"
