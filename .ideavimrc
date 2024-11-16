@@ -24,6 +24,7 @@ set easymotion
 set highlightedyank
 set textobj-entire
 set surround
+set argtextobj
 
 " which-key
 let g:WhichKeyDesc_Actions = "<leader>a Actions"
