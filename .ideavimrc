@@ -233,7 +233,11 @@ map <leader>dd <Action>(RestoreDefaultLayout)
 map gc <Action>(CommentByLineComment)
 map gC <Action>(CommentByBlockComment)
 
-map <leader>y "+y
-map <leader>p "+p
-map <leader>P "+P
+vmap <leader>y "*y
+vmap <leader>d "*d
+nmap <leader>y "*yy
+nmap <leader>p "*p
+nmap <leader>P "*P
+vmap <leader>p "*p
+vmap <leader>P "*P
 
