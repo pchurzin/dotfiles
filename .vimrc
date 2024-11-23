@@ -70,6 +70,8 @@ set cursorcolumn
 set colorcolumn=80,120
 set hidden
 set confirm
+set statusline=%{ObsessionStatus()}%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set laststatus=2
 
 augroup my_colorshemes
     autocmd!

@@ -6,5 +6,5 @@ function vimsession () {
     fi
 }
 
-alias vim='vimsession $*'
+#alias vim='vimsession $*'
 
