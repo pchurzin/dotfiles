@@ -49,9 +49,9 @@ set smarttab
 set expandtab
 set smartindent
 set list
-set listchars=tab:▸·,space:·
+set listchars=tab:▸·,trail:·
 if has("patch-8.1.0759")
-    set listchars=tab:▸·◂,space:·
+    set listchars=tab:▸·◂,trail:·
 end
 set history=200
 set visualbell
