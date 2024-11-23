@@ -1,0 +1,6 @@
+.gigaide/
+.idea/
+Session.vim
+tags
+*.swp
+
