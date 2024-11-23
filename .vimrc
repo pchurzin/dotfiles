@@ -26,6 +26,7 @@ function! PackInit() abort
     call minpac#add('prabirshrestha/vim-lsp')
     call minpac#add('junegunn/fzf', {'do': { -> fzf#install() }})
     call minpac#add('junegunn/fzf.vim')
+    call minpac#add('https://github.com/qpkorr/vim-bufkill.git')
 endfunction
 command! PackUpdate call PackInit() | call minpac#update()
 command! PackClean  call PackInit() | call minpac#clean()
