@@ -68,6 +68,7 @@ set cursorline
 set cursorcolumn
 set colorcolumn=80,120
 set hidden
+set confirm
 
 augroup my_colorshemes
     autocmd!
