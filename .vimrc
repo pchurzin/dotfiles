@@ -185,6 +185,8 @@ nnoremap <leader>O mqO<ESC>`q
 
 nmap <leader>D :Dispatch 
 
+nnoremap ZZ :xall<CR>
+
 " fzf mappings
 nnoremap <leader>fb :Buffers<CR>
 nnoremap <leader>fo :Files<CR>
