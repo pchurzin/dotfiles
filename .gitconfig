@@ -17,4 +17,4 @@
 	sort = taggerdate
 [fetch]
 	prune = true
-	prunetags = true
+	prunetags = false
