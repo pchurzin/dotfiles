@@ -20,3 +20,4 @@
 	prunetags = false
 [merge]
 	conflictStyle = zdiff3
+	tool = vimdiff
