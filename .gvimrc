@@ -1,0 +1,9 @@
+set guifont=Monospace\ 16
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set guioptions-=l
+set guioptions-=L
+set guioptions-=b
+set lines=300
+set columns=300
