@@ -1,0 +1,37 @@
+# $1 - namespace
+# $2 - mnemonic
+# $3 - fullname
+# $4 - cusip
+# $5 - quote_source
+function gnc-insert-commodity() {
+    if [ $# -ne 5 ]; then
+        echo "Usage:"
+        echo "gnc-insert-commodity <namespace> <mnemonic> <fullname> <isin> <quote_source>"
+    else
+        docker exec "$GNC_DB_CONTAINER" psql -U "$GNC_DB_USER" -c "INSERT INTO commodities (guid, namespace, mnemonic, fullname, cusip, fraction, quote_flag, quote_source, quote_tz) VALUES ( replace(gen_random_uuid()::text, '-', ''), '$1', '$2', '$3', '$4', 1, 1, '$5', null);"
+    fi
+}
+
+# $1 - isin
+# $2 - name
+function gnc-insert-ofz() {
+    if [ $# -ne 2 ]; then
+        echo "Usage:"
+        echo "gnc-insert-ofz <isin> <fullname>"
+    else
+        gnc-insert-commodity 'MCX_OFZ' "$1" "$2" "$1" 'moex_bond_ofz_nkd'
+    fi
+}
+
+# $1 - isin
+# $2 - name
+function gnc-insert-bond() {
+    if [ $# -ne 2 ]; then
+        echo "Usage:"
+        echo "gnc-insert-bond <isin> <fullname>"
+    else
+        gnc-insert-commodity 'MCX_BONDS' "$1" "$2" "$1" 'moex_bond_tplus_nkd'
+    fi
+}
+
+# vim: ft=bash
