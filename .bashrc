@@ -1,6 +1,7 @@
 #
 # ~/.bashrc
 #
+[ -r ~/.profile ] && . ~/.profile
 
 [[ $- != *i* ]] && return
 
