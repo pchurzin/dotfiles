@@ -70,8 +70,8 @@ if ${use_color} ; then
 	fi
 
     # git prompt
-    if [ -f ~/git-prompt.sh ] ; then
-        source ~/git-prompt.sh
+    if [ -f /usr/lib/git-core/git-sh-prompt ] ; then
+        source /usr/lib/git-core/git-sh-prompt
         export GIT_PS1_SHOWDIRTYSTATE=1
         if [[ ${EUID} == 0 ]] ; then
             PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W$(__git_ps1 " (%s)")\[\033[01;31m\]]\$\[\033[00m\] '
@@ -149,10 +149,6 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-
-
-# git completion
-[[ -f ~/git-completion.bash ]] && ~/git-completion.bash
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
