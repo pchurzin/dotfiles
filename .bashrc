@@ -150,17 +150,6 @@ ex ()
   fi
 }
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# load aliases
-if [ -d "$HOME/.bash_aliases.d" ] ; then
-    for f in $HOME/.bash_aliases.d/*; do
-        source "$f"
-    done
-fi
 
 # git completion
 [[ -f ~/git-completion.bash ]] && ~/git-completion.bash
@@ -168,6 +157,3 @@ fi
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
