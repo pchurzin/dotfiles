@@ -153,20 +153,39 @@ augroup lsp_install
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
-inoremap <C-d> <Del>
+" fzf insert mode completion
+function! PInsert2(item)
+    let @z=a:item
+    norm "zp
+    call feedkeys('a')
+endfunction
+
+function! CompleteInf()
+    let nl=[]
+    let l=complete_info()
+    for k in l['items']
+        call add(nl, k['word']. ' : ' .k['info'] . ' '. k['menu'] )
+    endfor
+call fzf#vim#complete(fzf#wrap({ 'source': nl,'reducer': { lines -> split(lines[0], '\zs :')[0] },'sink':function('PInsert2')}))
+endfunction
+
+imap <c-'> <CMD>:call CompleteInf()<CR>
+" ---- end fzf insert completion
+
+"inoremap <C-d> <Del>
 inoremap <S-Space> <C-O>a
 " hard mode
-inoremap <BS> <NOP>
-noremap <BS> <NOP>
-cnoremap <BS> <NOP>
-noremap <UP> <NOP>
-inoremap <UP> <NOP>
-noremap <DOWN> <NOP>
-inoremap <DOWN> <NOP>
-noremap <LEFT> <NOP>
-inoremap <LEFT> <NOP>
-noremap <RIGHT> <NOP>
-inoremap <RIGHT> <NOP>
+"inoremap <BS> <NOP>
+"noremap <BS> <NOP>
+"cnoremap <BS> <NOP>
+"noremap <UP> <NOP>
+"inoremap <UP> <NOP>
+"noremap <DOWN> <NOP>
+"inoremap <DOWN> <NOP>
+nnoremap <LEFT> <NOP>
+"inoremap <LEFT> <NOP>
+nnoremap <RIGHT> <NOP>
+"inoremap <RIGHT> <NOP>
 " nnoremap j <NOP>
 " nnoremap k <NOP>
 nnoremap l <NOP>
