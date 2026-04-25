@@ -205,17 +205,17 @@ vmap Ю <gt>
 inoremap <C-d> <Del>
 inoremap <S-Space> <C-O>a
 " hard mode
-inoremap <BS> <NOP>
-noremap <BS> <NOP>
-cnoremap <BS> <NOP>
-noremap <UP> <NOP>
-inoremap <UP> <NOP>
-noremap <DOWN> <NOP>
-inoremap <DOWN> <NOP>
-noremap <LEFT> <NOP>
-inoremap <LEFT> <NOP>
-noremap <RIGHT> <NOP>
-inoremap <RIGHT> <NOP>
+"inoremap <BS> <NOP>
+"noremap <BS> <NOP>
+"cnoremap <BS> <NOP>
+"noremap <UP> <NOP>
+"inoremap <UP> <NOP>
+"noremap <DOWN> <NOP>
+"inoremap <DOWN> <NOP>
+nnoremap <LEFT> <NOP>
+"inoremap <LEFT> <NOP>
+nnoremap <RIGHT> <NOP>
+"inoremap <RIGHT> <NOP>
 " nnoremap j <NOP>
 " nnoremap k <NOP>
 nnoremap l <NOP>
