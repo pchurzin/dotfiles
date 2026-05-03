@@ -213,9 +213,9 @@ inoremap <S-Space> <C-O>a
 "noremap <DOWN> <NOP>
 "inoremap <DOWN> <NOP>
 nnoremap <LEFT> <NOP>
-"inoremap <LEFT> <NOP>
+inoremap <LEFT> <NOP>
 nnoremap <RIGHT> <NOP>
-"inoremap <RIGHT> <NOP>
+inoremap <RIGHT> <NOP>
 " nnoremap j <NOP>
 " nnoremap k <NOP>
 nnoremap l <NOP>
@@ -244,18 +244,17 @@ map <leader>ci <Action>(ImplementMethods)
 map <leader>co <Action>(OverrideMethods)
 nmap gwae <Action>(ReformatCode)
 
+map <leader>ge <Action>(GotoNextError)
 map <leader>gc <Action>(GotoClass)
-map <leader>gC <Action>(GotoFile)
-map <leader>gR <Action>(RecentFiles)
-map <leader>gr <Action>(RecentChangedFiles)
+map <leader>gf <Action>(GotoFile)
+map <leader>gr <Action>(RecentFiles)
+map <leader>gR <Action>(RecentChangedFiles)
 map <leader>gl <Action>(RecentLocations)
 map <leader>gd gd
 map <leader>gy <Action>(GotoTypeDeclaration)
 map <leader>gi <Action>(GotoImplementation)
 map <leader>gu <Action>(ShowUsages)
 map <leader>gt <Action>(GotoTest)
-map <leader>gf <Action>(Forward)
-map <leader>gb <Action>(Back)
 map <leader>ga <Action>(GotoAction)
 " Refactoring
 map <leader>rn <Action>(RenameElement)
@@ -266,9 +265,6 @@ map <leader>rp <Action>(IntroduceParameter)
 map <leader>rs <Action>(ChangeSignature)
 map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 map <leader>rd <Action>(SafeDelete)
-" vcs
-map <leader>vf <Action>(Git.Fetch)
-map <leader>vb <Action>(Git.Branches)
 " actions
 map <leader>am <action>(ShowIntentionActions)
 map <leader>aR <Action>(RunClass)
@@ -281,7 +277,7 @@ map <leader>fP <Action>(ReplaceInPath)
 map <leader>fu <Action>(FindUsages)
 
 " Tools
-map <leader>ts <Action>(com.jetbrains.plugins.remotesdk.console.RunSshConsoleAction)
+"map <leader>ts <Action>(com.jetbrains.plugins.remotesdk.console.RunSshConsoleAction)
 
 map <leader>x :NERDTreeToggle<CR>
 map <leader>q <Action>(CloseContent)
