@@ -232,3 +232,5 @@ if &term =~ 'xterm'
 	let &t_SR = "\e[3 q" " blink underline
 	let &t_EI = "\e[2 q" " steady block
 endif
+
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
