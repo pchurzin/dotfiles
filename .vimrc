@@ -234,3 +234,16 @@ if &term =~ 'xterm'
 endif
 
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+
+function s:ExecuteRangeAndAppend() range
+    let commands = getline(a:firstline, a:lastline)
+    let processed = []
+    for line in commands
+        call add(processed, substitute(line, '\\$', '', ''))
+    endfor
+    let output = substitute(system(join(processed, ' ')), '\r', '\n', 'g')
+
+    call append(a:lastline, [''] + split(output, '\n'))
+endfunction
+
+command! -range ExecAppend <line1>,<line2>call s:ExecuteRangeAndAppend()
