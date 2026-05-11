@@ -223,6 +223,10 @@ nnoremap <leader>f/ :History/<CR>
 nnoremap <leader>fh :History<CR>
 nnoremap <leader>fg :GFiles<CR>
 
+nnoremap <leader>gd <C-]>
+nnoremap <C-j> <C-]>
+inoremap <C-i> <C-^>
+
 if &term =~ 'xterm'
 	let &t_SI = "\e[5 q" " blink bar
 	let &t_SR = "\e[3 q" " blink underline
