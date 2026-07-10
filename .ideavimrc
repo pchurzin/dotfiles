@@ -33,9 +33,6 @@ let g:WhichKeyDesc_ActionsRun = "<leader>ar Run"
 let g:WhichKeyDesc_ActionsDebugCurrent = "<leader>aD Debug this code"
 let g:WhichKeyDesc_ActionsDebug = "<leader>ad Debug"
 let g:WhichKeyDesc_ActionsShowIntentions = "<leader>am Show intentions"
-let g:WhichKeyDesc_Vcs = "<leader>v VSC"
-let g:WhichKeyDesc_VcsFetch = "<leader>vf Fetch"
-let g:WhichKeyDesc_VcsFetch = "<leader>vb Branches"
 let g:WhichKeyDesc_Refactoring = "<leader>r Refactoring"
 let g:WhichKeyDesc_RefactoringRenameElement = "<leader>rn Rename"
 let g:WhichKeyDesc_RefactoringExtractMethod = "<leader>rm Extract method"
@@ -222,6 +219,7 @@ nnoremap l <NOP>
 nnoremap h <NOP>
 "nnoremap <C-N> <NOP>
 "nnoremap <C-P> <NOP>
+nnoremap <C-j> <C-]>
 
 " add line after current
 nnoremap <leader>o mqo<ESC>`q
@@ -275,6 +273,10 @@ map <leader>ad <Action>(Debug)
 map <leader>fp <Action>(FindInPath)
 map <leader>fP <Action>(ReplaceInPath)
 map <leader>fu <Action>(FindUsages)
+
+map <leader>fm <Action>(ShowTypeBookmarks)
+
+map <leader>si <Action>(SelectIn)
 
 " Tools
 "map <leader>ts <Action>(com.jetbrains.plugins.remotesdk.console.RunSshConsoleAction)
