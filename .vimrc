@@ -227,7 +227,7 @@ nnoremap <leader>gd <C-]>
 nnoremap <C-j> <C-]>
 inoremap <C-i> <C-^>
 
-if &term =~ 'xterm'
+if &term =~ '\(xterm\|tmux\)'
 	let &t_SI = "\e[5 q" " blink bar
 	let &t_SR = "\e[3 q" " blink underline
 	let &t_EI = "\e[2 q" " steady block
