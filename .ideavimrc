@@ -274,7 +274,11 @@ map <leader>fp <Action>(FindInPath)
 map <leader>fP <Action>(ReplaceInPath)
 map <leader>fu <Action>(FindUsages)
 
+" mappings aligned with .vimrc
+" fzf marks
 map <leader>fm <Action>(ShowTypeBookmarks)
+" fzf commands
+map <leader>fc <Action>(GotoAction)
 
 map <leader>si <Action>(SelectIn)
 
