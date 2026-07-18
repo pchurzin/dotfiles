@@ -1,9 +1,6 @@
-"source ~/.vim/vimrc
 set visualbell
 
 let mapleader = " "
-"sethandler <C-N> a:vim
-"sethandler <C-J> a:vim
 
 set hlsearch
 set incsearch
@@ -17,51 +14,11 @@ set showcmd
 
 set ideamarks
 set ideajoin
-set NERDTree
-"set multicursor
 set easymotion
-"set sneak
 set highlightedyank
 set textobj-entire
 set surround
 set argtextobj
-
-" which-key
-let g:WhichKeyDesc_Actions = "<leader>a Actions"
-let g:WhichKeyDesc_ActionsRunCurrent = "<leader>aR Run this code"
-let g:WhichKeyDesc_ActionsRun = "<leader>ar Run"
-let g:WhichKeyDesc_ActionsDebugCurrent = "<leader>aD Debug this code"
-let g:WhichKeyDesc_ActionsDebug = "<leader>ad Debug"
-let g:WhichKeyDesc_ActionsShowIntentions = "<leader>am Show intentions"
-let g:WhichKeyDesc_Refactoring = "<leader>r Refactoring"
-let g:WhichKeyDesc_RefactoringRenameElement = "<leader>rn Rename"
-let g:WhichKeyDesc_RefactoringExtractMethod = "<leader>rm Extract method"
-let g:WhichKeyDesc_RefactoringIntroduceVar = "<leader>rv Introduce variable"
-let g:WhichKeyDesc_RefactoringIntroduceField = "<leader>rf Introduce field"
-let g:WhichKeyDesc_RefactoringIntroduceParameter = "<leader>rp Introduce parameter"
-let g:WhichKeyDesc_RefactoringChangeSignature = "<leader>rs Change signature"
-let g:WhichKeyDesc_RefactoringQuickList = "<leader>rr Quick list"
-let g:WhichKeyDesc_RefactoringQuickList = "<leader>rd Safe delete"
-let g:WhichKeyDesc_Goto = "<leader>g Goto"
-let g:WhichKeyDesc_GotoClass = "<leader>gc Goto Class"
-let g:WhichKeyDesc_GotoFile = "<leader>gC Goto File"
-let g:WhichKeyDesc_GotoRecentFiles = "<leader>gR Recent Files"
-let g:WhichKeyDesc_GotoRecentChangedFiles = "<leader>gr Recent changed files"
-let g:WhichKeyDesc_GotoRecentLocations = "<leader>gl Recent locations"
-let g:WhichKeyDesc_GotoDeclaration = "<leader>gd Goto Declaration"
-let g:WhichKeyDesc_GotoTypeDeclaration = "<leader>gy Goto Type declaration"
-let g:WhichKeyDesc_GotoImplementation = "<leader>gi Goto Implementation"
-let g:WhichKeyDesc_GotoShowUsages = "<leader>gu Show Usages"
-let g:WhichKeyDesc_GotoTest = "<leader>gt Goto Test"
-let g:WhichKeyDesc_GotoForward = "<leader>gf Forward"
-let g:WhichKeyDesc_GotoBack = "<leader>gb Back"
-let g:WhichKeyDesc_GotoAction = "<leader>ga Goto Action"
-let g:WhichKeyDesc_JumpEasyMotion = "<leader>j Jump with easymotion"
-let g:WhichKeyDesc_Code = "<leader>c Code"
-let g:WhichKeyDesc_CodeImplementMethods = "<leader>ci Implement methods"
-let g:WhichKeyDesc_CodeImplementMethods = "<leader>co Override methods"
-let g:WhichKeyDesc_ToolsStartSsh = "<leader>ts Start SSH"
-set which-key
 
 " Use system clipboard
 set clipboard^=unnamed,unnamedplus
@@ -197,9 +154,6 @@ vmap ю .
 vmap Ю <gt>
 " end russian mapping
 
-"set notimeout
-"inoremap jk <Esc>
-inoremap <C-d> <Del>
 inoremap <S-Space> <C-O>a
 " hard mode
 "inoremap <BS> <NOP>
@@ -209,29 +163,19 @@ inoremap <S-Space> <C-O>a
 "inoremap <UP> <NOP>
 "noremap <DOWN> <NOP>
 "inoremap <DOWN> <NOP>
-nnoremap <LEFT> <NOP>
-inoremap <LEFT> <NOP>
-nnoremap <RIGHT> <NOP>
-inoremap <RIGHT> <NOP>
+"nnoremap <LEFT> <NOP>
+"inoremap <LEFT> <NOP>
+"nnoremap <RIGHT> <NOP>
+"inoremap <RIGHT> <NOP>
 " nnoremap j <NOP>
 " nnoremap k <NOP>
 nnoremap l <NOP>
 nnoremap h <NOP>
-"nnoremap <C-N> <NOP>
-"nnoremap <C-P> <NOP>
-nnoremap <C-j> <C-]>
 
 " add line after current
 nnoremap <leader>o mqo<ESC>`q
 " add line before current
 nnoremap <leader>O mqO<ESC>`q
-
-imap <A-J> <Action>(EditorDown)
-imap <A-K> <Action>(EditorUp)
-imap <C-X><C-O> <Action>(SmartTypeCompletion)
-imap <C-X><C-U> <Action>(CodeCompletion)
-imap <C-N> <Action>(HippieBackwardCompletion)
-imap <C-P> <Action>(HippieCompletion)
 
 " no highlight
 nnoremap <leader>ch :nohls<CR>
@@ -244,16 +188,12 @@ nmap gwae <Action>(ReformatCode)
 
 map <leader>ge <Action>(GotoNextError)
 map <leader>gc <Action>(GotoClass)
-map <leader>gf <Action>(GotoFile)
-map <leader>gr <Action>(RecentFiles)
-map <leader>gR <Action>(RecentChangedFiles)
-map <leader>gl <Action>(RecentLocations)
+map <leader>gr <Action>(RecentChangedFiles)
 map <leader>gd gd
 map <leader>gy <Action>(GotoTypeDeclaration)
 map <leader>gi <Action>(GotoImplementation)
 map <leader>gu <Action>(ShowUsages)
 map <leader>gt <Action>(GotoTest)
-map <leader>ga <Action>(GotoAction)
 " Refactoring
 map <leader>rn <Action>(RenameElement)
 map <leader>rm <Action>(ExtractFunction)
@@ -279,13 +219,15 @@ map <leader>fu <Action>(FindUsages)
 map <leader>fm <Action>(ShowTypeBookmarks)
 " fzf commands
 map <leader>fc <Action>(GotoAction)
+" fzf jumps
+map <leader>fj <Action>(RecentLocations)
+" fzf buffers
+map <leader>fb <Action>(RecentFiles)
+" fzf history
+map <leader>fh <Action>(RecentFiles)
+" fzf open file
+map <leader>fo <Action>(GotoFile)
 
-map <leader>si <Action>(SelectIn)
-
-" Tools
-"map <leader>ts <Action>(com.jetbrains.plugins.remotesdk.console.RunSshConsoleAction)
-
-map <leader>x :NERDTreeToggle<CR>
 map <leader>q <Action>(CloseContent)
 map <leader>j <Plug>(easymotion-s)
 map <leader><leader>w <Plug>(easymotion-bd-w)
@@ -295,9 +237,10 @@ map <leader><leader>E <Plug>(easymotion-bd-E)
 
 map <leader>dd <Action>(RestoreDefaultLayout)
 
+map <leader>si <Action>(SelectIn)
 " comments
-map gc <Action>(CommentByLineComment)
-map gC <Action>(CommentByBlockComment)
+map <leader>cl <Action>(CommentByLineComment)
+map <leader>cb <Action>(CommentByBlockComment)
 
 vmap <leader>y "*y
 vmap <leader>d "*d
