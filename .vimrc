@@ -40,7 +40,7 @@ filetype plugin indent on
 syntax on
 
 set encoding=utf-8
-set keymap=russian-jcukenwin
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 set iminsert=0
 set imsearch=-1
 set nowrap
