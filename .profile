@@ -14,6 +14,11 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# set PATH so it includes node binaries
+if [ -d "$HOME/apps/node/bin" ] ; then
+    PATH="$HOME/apps/node/bin:$PATH"
+fi
+
 # load aliases
 if [ -d "$HOME/.bash_aliases.d" ] ; then
     for f in $HOME/.bash_aliases.d/*; do
