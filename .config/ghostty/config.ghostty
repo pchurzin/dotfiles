@@ -1,0 +1,15 @@
+font-size = 18
+
+theme = iTerm2 Solarized Light
+
+notify-on-command-finish = unfocused
+notify-on-command-finish-action = bell,notify
+notify-on-command-finish-after = 10s
+
+maximize = true
+
+window-save-state = always
+
+keybind = "super+j>g>p=text:git push origin "
+
+keybind = super+j>t>o=toggle_tab_overview
