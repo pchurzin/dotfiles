@@ -241,6 +241,7 @@ map <leader>si <Action>(SelectIn)
 " comments
 map <leader>cl <Action>(CommentByLineComment)
 map <leader>cb <Action>(CommentByBlockComment)
+map <leader>t <Action>(ToolWindowsGroup)
 
 vmap <leader>y "*y
 vmap <leader>d "*d
